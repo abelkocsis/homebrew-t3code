@@ -5,6 +5,7 @@ Apple silicon, macOS 13 or later.
 
 ```sh
 brew tap abelkocsis/t3code
+brew trust abelkocsis/t3code
 brew install --cask t3-code
 ```
 
