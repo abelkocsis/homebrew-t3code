@@ -13,19 +13,19 @@ cask "t3-code" do
   depends_on arch: :arm64
   depends_on macos: :ventura
 
-  app "T3 Code (Alpha).app"
+  app "T3 Code (Beta).app"
 
   # Releases are unsigned, so Gatekeeper calls the app damaged until the
   # quarantine flag is cleared once.
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/T3 Code (Alpha).app"]
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/T3 Code (Beta).app"]
   end
 
   uninstall quit: "com.t3tools.t3code"
 
   # ~/.t3 holds the user's threads and projects. It stays on zap.
   zap trash: [
-    "~/Library/Application Support/T3 Code (Alpha)",
+    "~/Library/Application Support/T3 Code (Beta)",
     "~/Library/Caches/com.t3tools.t3code",
     "~/Library/Preferences/com.t3tools.t3code.plist",
     "~/Library/Saved Application State/com.t3tools.t3code.savedState",
