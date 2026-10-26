@@ -1,15 +1,16 @@
-cask "t3-code" do
+cask "t3-code-bitsafe" do
   # The app updates itself from the fork's GitHub releases, so the cask always
   # installs the newest release and never pins a version or a checksum.
   version :latest
   sha256 :no_check
 
   url "https://github.com/abelkocsis/t3code/releases/latest/download/T3-Code-arm64.dmg"
-  name "T3 Code"
+  name "T3 Code (BitSafe)"
   desc "BitSafe's fork of T3 Code, a GUI for coding agents"
   homepage "https://github.com/abelkocsis/t3code"
 
   auto_updates true
+  conflicts_with cask: "t3-code"
   depends_on arch: :arm64
   depends_on macos: :ventura
 

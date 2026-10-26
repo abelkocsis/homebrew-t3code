@@ -6,7 +6,9 @@ Apple silicon, macOS 13 or later.
 ```sh
 brew tap abelkocsis/t3code
 brew trust abelkocsis/t3code
-brew install --cask t3-code
+brew install --cask t3-code-bitsafe
 ```
 
 The app updates itself from its GitHub releases, so `brew upgrade` leaves it alone.
+
+The official Homebrew cask `t3-code` is upstream T3 Code, not this fork. Do not install both.
